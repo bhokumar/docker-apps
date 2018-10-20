@@ -1,0 +1,9 @@
+https://computingforgeeks.com/how-to-install-minikube-on-ubuntu-18-04/
+
+https://computingforgeeks.com/install-kvm-on-centos-7-ubuntu-16-04-debian-9-sles-12-arch-linux/
+
+sudo  apt-get -y install qemu-kvm libvirt-bin virt-top  libguestfs-tools virtinst bridge-utils
+
+wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x minikube-linux-amd64
+sudo mv minikube-linux-amd64 /usr/local/bin/minikube
