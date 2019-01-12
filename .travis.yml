@@ -14,7 +14,7 @@ after_success:
   - docker build -t bhoopendra/multi-worker ./complex/worker
   - docker build -t bhoopendra/multi-server ./complex/server
   #Login to the Docker Cli
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_ID" --password-stdin
   #Push the images to hub.docker.com
   - docker push bhoopendra/multi-client
   - docker push bhoopendra/multi-nginx
