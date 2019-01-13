@@ -20,3 +20,17 @@ after_success:
   - docker push bhoopendra/multi-nginx
   - docker push bhoopendra/multi-worker
   - docker push bhoopendra/multi-server
+
+  # Pull the images from hub.docker.com and deploy to AWS elastic beanstalk
+  deploy:
+    provider: elasticbeanstalk
+    region: us-west-1
+    app: muti-docker
+    env: MultiDocker-env
+    bucket_name: elastibeanstalk.us-west-1.012357
+    bucket_path: docker-multi
+    on:
+      branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: 
+      secure: $AWS_SECRET_KEY
